@@ -47,33 +47,34 @@ public void tester()
   }
 
   public String reverse(String sWord) {
-    String s = "";
+    String turned = "";
     for (int i = sWord.length() - 1; i >= 0; i--) {
-      s = s + sWord.charAt(i);
+      turned = turned + sWord.charAt(i);
     }
-    return s;
+    return turned;
   }
+  
   public String noCapitals(String sWord) {
     return sWord.toLowerCase();
   }
 
   public String onlyLetters(String sString) {
-    String empty = "";
+    String letters = "";
     for (int i = 0; i <= sString.length() - 1; i++) {
       if (Character.isLetter(sString.charAt(i)) == true) {
-        empty+=sString.charAt(i);
+        letters+=sString.charAt(i);
       }
     }
-    return empty;
+    return letters;
   }
 
   public String noSpaces(String sWord) {
-    String empty = "";
+    String unspaced = "";
     for (int i = 0; i <= sWord.length()-1; i++) {
       if ((Character.isWhitespace(sWord.charAt(i))) == false) {
-        empty = empty + sWord.charAt(i);
+        unspaced = unspaced + sWord.charAt(i);
       }
     }
-    return empty;
+    return unspaced;
   }
 }
